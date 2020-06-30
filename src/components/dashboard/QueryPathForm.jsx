@@ -1,7 +1,14 @@
 import React from "react";
 import fetchFolderContent from "../../actions/index.js";
+import { useState, useEffect } from "react";
 
 const QueryPathForm = ({ query, handleQuery, handleContent }) => {
+
+  const [errorMessage, setErrorMessage] = useState(undefined);
+
+  // useEffect(() => {
+  //   setErrorMessage(undefined);
+  // });
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -12,6 +19,7 @@ const QueryPathForm = ({ query, handleQuery, handleContent }) => {
       //parse data received
 
       handleContent(queryResponse);
+      setErrorMessage(undefined);
     } catch (error) {
       let errorMessage;
 
@@ -27,24 +35,30 @@ const QueryPathForm = ({ query, handleQuery, handleContent }) => {
         errorMessage = "unable to process your request at this time, try again later or contact Folder View is this error persists";
       }
 
+      setErrorMessage(errorMessage);
+
       // do something with error message
     }
-
 
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Target Path:
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Target Path:
         <input type="text"
-          type="text"
-          value={query}
-          onChange={event => handleQuery(event)}
-        />
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
+            type="text"
+            value={query}
+            onChange={event => handleQuery(event)}
+          />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+      {errorMessage &&
+        <p>{errorMessage} </p>}
+
+    </div>
   );
 }
 

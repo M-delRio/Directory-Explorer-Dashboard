@@ -21,10 +21,8 @@ const fetchFolderContent = async (queryPath) => {
 
   try {
     const response = await axios.get(baseURL, config);
-
-    console.log(response.data.data);
     //parse response
-    return response;
+    return response.data.data;
   } catch (error) {
     throw error;
   }
@@ -32,14 +30,3 @@ const fetchFolderContent = async (queryPath) => {
 };
 
 export default fetchFolderContent;
-
-// try {
-//   // const response = await request.get();
-//   const response = await axios.get(baseURL, config);
-
-//   // console.log(response.data);
-//   console.log(JSON.stringify(response.data, null, 4))
-
-// } catch (error) {
-//   console.log(JSON.stringify(response.data, null, 4))
-// }

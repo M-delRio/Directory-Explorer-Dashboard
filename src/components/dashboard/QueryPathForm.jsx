@@ -16,7 +16,7 @@ const QueryPathForm = ({ query, handleQuery, handleContent }) => {
     try {
       const queryResponse = await fetchFolderContent(query);
 
-      //parse data received
+      console.log(queryResponse);
 
       handleContent(queryResponse);
       setErrorMessage(undefined);

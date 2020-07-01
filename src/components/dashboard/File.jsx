@@ -2,16 +2,13 @@ import React from "react";
 
 import { useState, useEffect } from "react";
 
-{/* <Files
-        fileCount={fileCount}
-        files={files}
-      /> */}
-
-const Files = ({ files }) => {
+const File = ({ fileData }) => {
 
   return (
     <p>
-      {files}
+      {fileData.name}
+      {fileData.size}
+      {fileData.lastModifiedDate}
     </ p>
   );
 }

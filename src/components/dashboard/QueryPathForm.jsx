@@ -36,8 +36,7 @@ const QueryPathForm = ({ query, handleQuery, handleContent }) => {
       }
 
       setErrorMessage(errorMessage);
-
-      // do something with error message
+      handleContent({});
     }
 
   };

@@ -49,22 +49,33 @@ const QueryPathForm = ({ query, handleQuery, setQuery, handleContent }) => {
   return (
     <div>
       <form
+        class="form-horizontal"
         onSubmit={handleSubmit}>
-        <label for="sourceFolderInput">Target Path:</label>
-        <input
-          id="sourceFolderInput"
-          class="form-control"
-          placeholder="enter/source/folder"
-          type="text"
-          value={query}
-          onChange={event => handleQuery(event)}
-        />
-        <input type="submit" value="Submit" />
-      </form>
+        <div class="form-group">
+
+          <label
+            for="sourceFolderInput"
+            class="col-sm-2 control-label">Target Path:</label>
+          <div class="col-sm-10">
+            <input
+              id="sourceFolderInput"
+              class="form-control"
+              placeholder="enter/source/folder"
+              type="text"
+              // class="form-control"
+              value={query}
+              onChange={event => handleQuery(event)}
+            />
+          </div>
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">Find!</button>
+        </div>
+      </form >
       {errorMessage &&
         <p>{errorMessage} </p>}
 
-    </div>
+    </div >
   );
 }
 

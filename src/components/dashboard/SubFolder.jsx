@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 const SubFolder = ({ name }) => {
 
   return (
-    <p>
+    <li class="list-group-item">
       {name}
-    </ p>
+    </li>
   );
 }
 

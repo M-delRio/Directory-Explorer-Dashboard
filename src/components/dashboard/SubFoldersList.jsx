@@ -8,7 +8,7 @@ const SubFoldersList = ({ subFolders }) => {
 
 
   return (
-    <div>
+    <ul class="list-group">
       {subFolders.map((name, index) => (
         <SubFolder
           name={name}
@@ -16,7 +16,7 @@ const SubFoldersList = ({ subFolders }) => {
         />
       ))
       }
-    </div>
+    </ul>
   );
 }
 

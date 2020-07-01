@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 const File = ({ fileData }) => {
 
   return (
-    <p>
-      {fileData.name}
-      {fileData.size}
-      {fileData.lastModifiedDate}
-    </ p>
+    <tr>
+      <td>{fileData.name}</td>
+      <td>{fileData.size}</td>
+      <td>{fileData.lastModifiedDate}</td>
+    </tr>
   );
 }
 

@@ -1,9 +1,8 @@
 import React from "react";
-import SubFolder from "./SubFolder";
 
 import { useState, useEffect } from "react";
 
-const SubFolderButton = ({ handleExpand, subFolders }) => {
+const SubFolderButton = ({ handleExpand, subFolders, isExpanded }) => {
   let subFoldersLength;
 
   if (subFolders) {
@@ -13,7 +12,8 @@ const SubFolderButton = ({ handleExpand, subFolders }) => {
     <button
       onClick={handleExpand}
     >
-      {subFoldersLength} subfolders(click to expand)
+      {isExpanded ? "click to collapse subfolders view" :
+        `${subFoldersLength} subfolders(click to show list expand`}
     </button >
   );
 }

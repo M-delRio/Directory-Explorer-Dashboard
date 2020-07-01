@@ -21,6 +21,7 @@ const Dashboard = () => {
       <QueryPathForm
         query={pathQuery}
         handleQuery={handleQuery}
+        setQuery={setQuery}
         handleContent={handleContent}
       />
       <FolderDataContainer

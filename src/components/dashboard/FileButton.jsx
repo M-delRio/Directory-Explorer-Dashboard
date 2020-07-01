@@ -3,13 +3,14 @@ import Files from "./FileList";
 
 import { useState, useEffect } from "react";
 
-const FileButton = ({ fileCount, handleExpand }) => {
+const FileButton = ({ fileCount, isExpanded, handleExpand }) => {
 
   return (
     <button
       onClick={handleExpand}
     >
-      {fileCount} files(click to expand)
+      {isExpanded ? "click to collapse file view" :
+        `${fileCount} files(click to show details)`}
     </button >
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import fetchFolderContent from "../../actions/index.js";
 import { useState, useEffect } from "react";
 
-const QueryPathForm = ({ query, handleQuery, handleContent }) => {
+const QueryPathForm = ({ query, handleQuery, setQuery, handleContent }) => {
 
   const [errorMessage, setErrorMessage] = useState(undefined);
 
@@ -18,7 +18,12 @@ const QueryPathForm = ({ query, handleQuery, handleContent }) => {
 
       console.log(queryResponse);
 
+      if (query === "") {
+        setQuery("./");
+      }
+
       handleContent(queryResponse);
+
       setErrorMessage(undefined);
     } catch (error) {
       let errorMessage;
@@ -43,15 +48,17 @@ const QueryPathForm = ({ query, handleQuery, handleContent }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Target Path:
-        <input type="text"
-            type="text"
-            value={query}
-            onChange={event => handleQuery(event)}
-          />
-        </label>
+      <form
+        onSubmit={handleSubmit}>
+        <label for="sourceFolderInput">Target Path:</label>
+        <input
+          id="sourceFolderInput"
+          class="form-control"
+          placeholder="enter/source/folder"
+          type="text"
+          value={query}
+          onChange={event => handleQuery(event)}
+        />
         <input type="submit" value="Submit" />
       </form>
       {errorMessage &&

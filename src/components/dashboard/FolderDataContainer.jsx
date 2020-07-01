@@ -11,15 +11,15 @@ import { useState, useEffect } from "react";
 // subFolders={folderData.subFolders}
 
 const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) => {
-  const [filesExpand, toggleFilesExpand] = useState(false);
-  const [subFoldersExpand, toggleSubFoldersExpand] = useState(false);
+  const [filesExpanded, toggleFilesExpand] = useState(false);
+  const [subFoldersExpanded, toggleSubFoldersExpand] = useState(false);
 
   const handleFilesExpand = event => {
-    toggleFilesExpand(!filesExpand);
+    toggleFilesExpand(!filesExpanded);
   };
 
   const handleSubFoldersExpand = data => {
-    toggleSubFoldersExpand(!subFoldersExpand);
+    toggleSubFoldersExpand(!subFoldersExpanded);
   };
 
   return (
@@ -32,18 +32,19 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
           </section>
           <FileButton
             fileCount={fileCount}
-            files={files}
+            isExpanded={filesExpanded}
             handleExpand={handleFilesExpand}
           />
-          {filesExpand &&
+          {filesExpanded &&
             <FileList
               files={files}
             />}
           <SubFolderButton
             handleExpand={handleSubFoldersExpand}
             subFolders={subFolders}
+            isExpanded={subFoldersExpanded}
           />
-          {subFoldersExpand &&
+          {subFoldersExpanded &&
             <SubFoldersList
               subFolders={subFolders}
             />}

@@ -12,15 +12,24 @@ const FileList = ({ files }) => {
   // console.log(files);
 
   return (
-    <div>
-      {files.map((file, index) => (
-        <File
-          fileData={file}
-          key={index}
-        />
-      ))
-      }
-    </div>
+    <table>
+      <caption></caption>
+      <tbody>
+        <tr>
+          <th>File Name</th>
+          <th>File Size (bytes)</th>
+          <th>Date Last Modified</th>
+        </tr>
+
+        {files.map((file, index) => (
+          <File
+            fileData={file}
+            key={index}
+          />
+        ))
+        }
+      </tbody>
+    </table>
   );
 }
 

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import QueryPathForm from "./QueryPathForm";
 import FolderDataContainer from "./FolderDataContainer";
 
-
 const Dashboard = () => {
   const [pathQuery, setQuery] = useState("");
   const [folderData, setContent] = useState({});

@@ -3,12 +3,8 @@ import FileButton from "./FileButton";
 import FileList from "./FileList";
 import SubFolderButton from "./SubFolderButton";
 import SubFoldersList from "./SubFoldersList";
-import { useState, useEffect } from "react";
-
-// fileCount={folderData.fileCount}
-// totalFileSize={folderData.totalFileSize}
-// files={folderData.files}
-// subFolders={folderData.subFolders}
+import { useState } from "react";
+import commaNumber from "comma-number";
 
 const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) => {
   const [filesExpanded, toggleFilesExpand] = useState(false);
@@ -26,11 +22,10 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
     <div>
       {fileCount !== undefined &&
         <>
-
           <h2 className="col-md-2" >Results</h2>
           <section id="results-metadata-container">
             <p className="results-metadata">File Count: {fileCount}</p>
-            <p className="results-metadata">Total File Size: {totalFileSize}</p>
+            <p className="results-metadata">Total File Size: {commaNumber(totalFileSize)} bytes</p>
           </section>
 
           <FileButton
@@ -43,6 +38,7 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
             <FileList
               files={files}
             />}
+
           <SubFolderButton
             handleExpand={handleSubFoldersExpand}
             subFolders={subFolders}
@@ -52,10 +48,8 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
             <SubFoldersList
               subFolders={subFolders}
             />}
-
         </>
       }
-
     </ div >
   );
 }

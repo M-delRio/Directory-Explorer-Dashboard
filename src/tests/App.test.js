@@ -34,48 +34,6 @@ describe("App", () => {
     expect(screen.getByDisplayValue("my_path")).toBeInTheDocument();
 
   });
-
-  // test('fetches files from API and displays associated data', async () => {
-
-  //   const data = {
-  //     "sourceFolder": "images/company_retreat",
-  //     "files": [{}, {}, {}],
-  //     "subFolders": ["2020", "2019", "2018"],
-  //     "fileCount": 45,
-  //     "totalFileSize": 500000000
-  //   }
-
-  //   const promise = Promise.resolve({
-  //     data: {
-  //       message: "Folder content successfully retrieved",
-  //       data: JSON.stringify(data)
-  //     }
-  //   });
-
-  //   axios.get.mockImplementationOnce(() => promise);
-
-  //   render(<App />);
-
-  //   await act(() => promise);
-  //   // axios.get.mockImplementationOnce(() => {
-  //   //   Promise.resolve({
-  //   //     message: "Folder content successfully retrieved",
-  //   //     data: JSON.stringify(data)
-  //   //   });
-  //   // });
-  //   await userEvent.click(screen.getByText('Find!'));
-
-  //   // act(async () => {
-  //   //   await userEvent.click(screen.getByText('Find!'));
-  //   // });
-
-  //   expect(await screen.getByText("File Count: 3")).toBeInTheDocument();
-
-
-  //   // const items = await screen.findAllByRole('listitem');
-
-  //   // expect(items).toHaveLength(2);
-  // });
 });
 
 describe("QueryPath", () => {

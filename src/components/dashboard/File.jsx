@@ -1,13 +1,12 @@
 import React from "react";
-
-import { useState, useEffect } from "react";
+import commaNumber from "comma-number";
 
 const File = ({ fileData }) => {
 
   return (
     <tr>
       <td>{fileData.name}</td>
-      <td>{fileData.size}</td>
+      <td>{commaNumber(fileData.size)}</td>
       <td>{fileData.lastModifiedDate}</td>
     </tr>
   );

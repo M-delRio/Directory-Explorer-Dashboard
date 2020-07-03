@@ -1,14 +1,10 @@
 import React from "react";
 import fetchFolderContent from "../../actions/index.js";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const QueryPathForm = ({ query, handleQuery, setQuery, handleContent }) => {
 
   let [errorMessage, setErrorMessage] = useState(undefined);
-
-  // useEffect(() => {
-  //   setErrorMessage(undefined);
-  // });
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -62,11 +58,11 @@ const QueryPathForm = ({ query, handleQuery, setQuery, handleContent }) => {
           </div>
         </div>
         <div className="form-group">
-          <div class="new-path-button col-sm-offset-2 col-sm-1">
-            <button type="submit" className="btn btn-primary">Find!</button>
+          <div className="col-sm-offset-2 col-sm-1">
+            <button type="submit" className="new-path-button btn btn-primary">Find!</button>
           </div>
           {errorMessage &&
-            <p className="error-message col-sm-3">{errorMessage} </p>}
+            <p className="error-message col-sm-6">{errorMessage} </p>}
         </div>
       </form >
     </div >

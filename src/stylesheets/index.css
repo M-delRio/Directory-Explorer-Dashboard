@@ -1,8 +1,3 @@
-
-body {
-  
-}
-
 h1 {
   color: #478559;
   margin-top: 2%;
@@ -12,21 +7,21 @@ h1 {
 h2 {
   color: #478559;
   margin: 2% 0;
-  
 }
 
 .error-message {
-  color: red;
+  font-size: 1.5em;
+  margin-top: 2%;
+  color: #F08080;
 }
 
 .new-path-button {
-  /* color: black; */
-  /* background-color: #39a0ca; */
-  margin-bottom: 6%;
+  background-color: #478559
 }
 
-.new-path-button:hover {  
-  /* background-color: #39a0ca; */
+.form-control:focus {
+  border-color: #39a0ca;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #39a0ca;
 }
 
 .expand-list-button {
@@ -44,6 +39,10 @@ section #results-metadata-container {
   border: 0.2em solid black;
 }
 
+.results-metadata-container {
+  margin-top: 6%;
+}
+
 .results-metadata {
   font-size: 1.5em;
   margin-left: 2%;
@@ -56,8 +55,6 @@ section #results-metadata-container {
 li:hover {
   background: lightgrey;
 }
-
-
 
 /* Green Treeline: #478559
 

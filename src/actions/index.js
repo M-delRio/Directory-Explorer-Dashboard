@@ -1,9 +1,8 @@
 // import axios from "axios";
+import FOLDERS_ROUTE from "../helpers/apiRoutes";
 const axios = require('axios').default;
 
-// import FOLDERS_ROUTE from "../helpers/apiRoutes";
-
-const baseURL = "http://localhost:3001/folders"
+// const baseURL = "http://localhost:3001/folders"
 
 const fetchFolderContent = async (queryPath) => {
   // const headers = {
@@ -20,7 +19,7 @@ const fetchFolderContent = async (queryPath) => {
   }
 
   try {
-    const response = await axios.get(baseURL, config);
+    const response = await axios.get(FOLDERS_ROUTE, config);
     //parse response
     return response.data.data;
   } catch (error) {

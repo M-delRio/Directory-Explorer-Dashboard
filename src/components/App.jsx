@@ -13,10 +13,6 @@ const App = () => {
           <Dashboard />
         </Route>
       </Switch>
-
-
-
-
     </BrowserRouter>
   );
 }

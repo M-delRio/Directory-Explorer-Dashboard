@@ -1,16 +1,7 @@
 import React from "react";
 import File from "./File";
 
-import { useState, useEffect } from "react";
-
-{/* <Files
-        fileCount={fileCount}
-        files={files}
-      /> */}
-
 const FileList = ({ files }) => {
-  // console.log(files);
-
   return (
     <table className="table table-hover">
       <caption></caption>

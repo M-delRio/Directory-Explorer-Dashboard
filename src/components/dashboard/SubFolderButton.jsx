@@ -1,7 +1,5 @@
 import React from "react";
 
-import { useState, useEffect } from "react";
-
 const SubFolderButton = ({ handleExpand, subFolders, isExpanded }) => {
   let subFoldersLength;
 
@@ -13,8 +11,8 @@ const SubFolderButton = ({ handleExpand, subFolders, isExpanded }) => {
       className="expand-list-button"
       onClick={handleExpand}
     >
-      {isExpanded ? "click to collapse subfolders view" :
-        `${subFoldersLength} subfolders(click to show list expand`}
+      {isExpanded ? "click to collapse subfolder view" :
+        `${subFoldersLength} subfolders(click to view list)`}
     </button >
   );
 }

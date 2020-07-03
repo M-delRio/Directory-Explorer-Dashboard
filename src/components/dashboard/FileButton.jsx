@@ -1,7 +1,4 @@
 import React from "react";
-import Files from "./FileList";
-
-import { useState, useEffect } from "react";
 
 const FileButton = ({ fileCount, isExpanded, handleExpand }) => {
 

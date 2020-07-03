@@ -1,3 +1,6 @@
+Prior to running the build process the `.env.production` `REACT_APP_API_ENDPOINT=`
+environment variable will need to be changed to reference the backend server endpoint of the Express app. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

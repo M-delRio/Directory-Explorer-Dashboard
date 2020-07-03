@@ -26,15 +26,19 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
     <div>
       {fileCount !== undefined &&
         <>
-          <section>
-            <p>File Count: {fileCount}</p>
-            <p>Total File Size: {totalFileSize}</p>
+
+          <h2 className="col-md-2" >Results</h2>
+          <section id="results-metadata-container">
+            <p className="results-metadata">File Count: {fileCount}</p>
+            <p className="results-metadata">Total File Size: {totalFileSize}</p>
           </section>
+
           <FileButton
             fileCount={fileCount}
             isExpanded={filesExpanded}
             handleExpand={handleFilesExpand}
           />
+
           {filesExpanded &&
             <FileList
               files={files}
@@ -48,9 +52,11 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
             <SubFoldersList
               subFolders={subFolders}
             />}
+
         </>
       }
-    </ div>
+
+    </ div >
   );
 }
 

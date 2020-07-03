@@ -10,6 +10,7 @@ const SubFolderButton = ({ handleExpand, subFolders, isExpanded }) => {
   }
   return (
     <button
+      className="expand-list-button"
       onClick={handleExpand}
     >
       {isExpanded ? "click to collapse subfolders view" :

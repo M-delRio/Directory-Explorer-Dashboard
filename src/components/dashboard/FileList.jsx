@@ -12,7 +12,7 @@ const FileList = ({ files }) => {
   // console.log(files);
 
   return (
-    <table>
+    <table className="table table-hover">
       <caption></caption>
       <tbody>
         <tr>

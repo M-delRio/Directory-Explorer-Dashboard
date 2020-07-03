@@ -3,6 +3,66 @@ body {
   
 }
 
-code {
+h1 {
+  color: #478559;
+  margin-top: 2%;
+  margin-bottom: 6%;
+}
+
+h2 {
+  color: #478559;
+  margin: 2% 0;
   
 }
+
+.error-message {
+  color: red;
+}
+
+.new-path-button {
+  /* color: black; */
+  /* background-color: #39a0ca; */
+  margin-bottom: 6%;
+}
+
+.new-path-button:hover {  
+  /* background-color: #39a0ca; */
+}
+
+.expand-list-button {
+  font-size: 1.2em;
+  background-color: #478559;
+  margin-bottom: 2%;
+  margin-left: 2%;
+}
+
+.expand-list-button:hover {  
+  background-color: #39a0ca;
+}
+
+section #results-metadata-container {
+  border: 0.2em solid black;
+}
+
+.results-metadata {
+  font-size: 1.5em;
+  margin-left: 2%;
+}
+
+.form-group label {
+  font-size: 1.5em;
+}
+
+li:hover {
+  background: lightgrey;
+}
+
+
+
+/* Green Treeline: #478559
+
+Purple baseline: #161748
+
+Pink highlight: #f95d9b
+
+Bluewater lowlight: #39a0ca */

@@ -19,19 +19,21 @@ const QueryPathForm = ({ query, handleQuery, setQuery, handleContent }) => {
       handleContent(queryResponse);
       setErrorMessage(undefined);
     } catch (error) {
+      let newErrorMessage;
+
       if (error.response) {
         // status code that falls out of the range of 2xx
-        errorMessage = error.response.data.message;
+        newErrorMessage = error.response.data.message;
 
       } else if (error.request) {
         // no response
-        errorMessage = "the request was sent but a response was not received from the server";
+        newErrorMessage = "the request was sent but a response was not received from the server";
       } else {
         // error setting up the request
-        errorMessage = "unable to process your request at this time, try again later or contact Folder View is this error persists";
+        newErrorMessage = "unable to process your request at this time, try again later or contact Folder View is this error persists";
       }
 
-      setErrorMessage(errorMessage);
+      setErrorMessage(newErrorMessage);
       handleContent({});
     }
 

@@ -3,7 +3,7 @@ import File from "./File";
 
 const FileList = ({ files }) => {
   return (
-    <table className="table table-hover">
+    <table id="files_table">
       <caption></caption>
       <tbody>
         <tr>

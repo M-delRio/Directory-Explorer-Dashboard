@@ -19,10 +19,10 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
   };
 
   return (
-    <div>
+    <section class="folder_data">
       {fileCount !== undefined &&
         <>
-          <h2 className="col-md-2" >Results</h2>
+          <h2>Results</h2>
           <section id="results-metadata-container">
             <p className="results-metadata">File Count: {fileCount}</p>
             <p className="results-metadata">Total File Size: {commaNumber(totalFileSize)} bytes</p>
@@ -50,7 +50,7 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
             />}
         </>
       }
-    </ div >
+    </ section>
   );
 }
 

@@ -1,65 +1,129 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html {
+  display: flex;
+  font-size: 18px;
+}
+
+body {
+  padding-left: 5%;
+}
+
 h1 {
-  color: #478559;
-  margin-top: 2%;
-  margin-bottom: 6%;
+  font-size: 3em;
+  margin-left: 10%;
+  margin-top: 5%;
 }
 
 h2 {
-  color: #478559;
-  margin: 2% 0;
+  outline: solid, 4px, red;
+  font-size: 2em;
+  margin-left: 20%;
+  margin-bottom: 5%;
+  margin-top: 10%;
 }
 
-.error-message {
-  font-size: 1.5em;
+form {
+  margin-top: 3%;
+}
+
+.path_selection {
+  margin-top: 5%
+}
+
+.folder_data {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.folder_data p {
+  font-size: 1.3em;
+}
+
+.folder_data button{
+  margin-right: 2%;
+  margin-bottom: 2%; 
+}
+
+.folder_data button:nth-of-type(2){
+  margin-right: 2%;
   margin-top: 2%;
-  color: #F08080;
+  margin-bottom: 2%; 
 }
 
-.new-path-button {
-  background-color: #478559
-}
-
-.form-control:focus {
-  border-color: #39a0ca;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #39a0ca;
-}
-
-.expand-list-button {
+.folder_data button{
   font-size: 1.2em;
-  background-color: #478559;
+  max-width: 60%;
+}
+
+#results-metadata-container p {
   margin-bottom: 2%;
-  margin-left: 2%;
 }
 
-.expand-list-button:hover {  
-  background-color: #39a0ca;
+tr th {
+  font-size: 1.2em;
 }
 
-section #results-metadata-container {
-  border: 0.2em solid black;
-}
-
-.results-metadata-container {
-  margin-top: 6%;
-}
-
-.results-metadata {
+/* #files_table {
   font-size: 1.5em;
-  margin-left: 2%;
-}
+  border-spacing: 20px;
+} */
 
-.form-group label {
-  font-size: 1.5em;
-}
 
-li:hover {
-  background: lightgrey;
-}
 
-/* Green Treeline: #478559
 
-Purple baseline: #161748
 
-Pink highlight: #f95d9b
 
-Bluewater lowlight: #39a0ca */
+
+

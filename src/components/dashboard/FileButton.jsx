@@ -4,7 +4,7 @@ const FileButton = ({ fileCount, isExpanded, handleExpand }) => {
 
   return (
     <button
-      className="row expand-list-button"
+      className=""
       onClick={handleExpand}
     >
       {isExpanded ? "click to collapse file view" :

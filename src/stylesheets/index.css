@@ -64,27 +64,61 @@ h1 {
   margin-top: 5%;
 }
 
+hr {
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 75%;
+}
+
 h2 {
   outline: solid, 4px, red;
   font-size: 2em;
   margin-left: 20%;
   margin-bottom: 5%;
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 8%;
 }
 
 form {
+  font-size: 1.3em;
   margin-top: 3%;
 }
 
 .path_selection {
-  margin-top: 5%
+  margin-top: 5%;
+}
+
+.path_selection form {  
+  display: flex;
+  align-items: center;
+}
+
+.path_selection label {  
+  display: flex;
+  align-items: center;
+}
+
+.path_selection form input {  
+  display: flex;
+  align-items: center;  
+  font-size: 1.2em;
+  margin: 0 2%;
+  width: 40%;
+}
+
+.path_selection button{
+  font-size: 1em;
+  height: 36px;
 }
 
 .folder_data {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
-  
 }
 
 .folder_data p {

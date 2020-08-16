@@ -40,32 +40,35 @@ const QueryPathForm = ({ query, handleQuery, setQuery, handleContent }) => {
   };
 
   return (
-    <section className="path_selection">
-      <h2>Path Selection</h2>
-      <p>To view a source folder enter a path relative to the server's home folder below</p>
-      <form
-        className=""
-        onSubmit={handleSubmit}>
-        <label
-          htmlFor="sourceFolderInput"
-          className="">Source Folder Path:</label>
-        <input
-          id="sourceFolderInput"
-          className="form-control"
-          placeholder="enter/source/folder"
-          type="text"
-          value={query}
-          onChange={event => handleQuery(event)}
-        />
-        <div className="form-group">
-          <div className="">
-            <button type="submit" className="new-path-button btn btn-primary">Find!</button>
+    <>
+      <hr></ hr>
+      <section className="path_selection">
+        <h2>Path Selection</h2>
+        <p>To view a source folder enter a path relative to the server's home folder below:</p>
+        <form
+          className=""
+          onSubmit={handleSubmit}>
+          <label
+            htmlFor="sourceFolderInput"
+            className="">Source Folder Path:</label>
+          <input
+            id="sourceFolderInput"
+            className="form-control"
+            placeholder="enter/source/folder"
+            type="text"
+            value={query}
+            onChange={event => handleQuery(event)}
+          />
+          <div className="form-group">
+            <div className="">
+              <button type="submit" className="new-path-button btn btn-primary">Find!</button>
+            </div>
+            {errorMessage &&
+              <p className="">{errorMessage} </p>}
           </div>
-          {errorMessage &&
-            <p className="">{errorMessage} </p>}
-        </div>
-      </form >
-    </section >
+        </form >
+      </section >
+    </>
   );
 }
 

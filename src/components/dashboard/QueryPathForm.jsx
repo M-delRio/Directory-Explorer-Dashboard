@@ -40,7 +40,7 @@ const QueryPathForm = ({ query, handleQuery, setQuery, handleContent }) => {
   };
 
   return (
-    <section class="path_selection">
+    <section className="path_selection">
       <h2>Path Selection</h2>
       <p>To view a source folder enter a path relative to the server's home folder below</p>
       <form

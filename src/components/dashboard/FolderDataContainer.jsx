@@ -19,7 +19,7 @@ const FolderDataContainer = ({ fileCount, totalFileSize, files, subFolders }) =>
   };
 
   return (
-    <section class="folder_data">
+    <section className="folder_data">
       {fileCount !== undefined &&
         <>
           <h2>Results</h2>

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const SubFolder = ({ name }) => {
 
   return (
-    <li class="list-group-item">
+    <li className="list-group-item">
       {name}
     </li>
   );

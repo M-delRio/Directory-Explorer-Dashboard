@@ -3,7 +3,7 @@ import SubFolder from "./SubFolder";
 
 const SubFoldersList = ({ subFolders }) => {
   return (
-    <ul class="list-group">
+    <ul className="list-group">
       {subFolders.map((name, index) => (
         <SubFolder
           name={name}
